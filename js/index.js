@@ -42,7 +42,34 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const cta = document.getElementById("cta-img");
-cta.setAttribute('src', 'img/header-img.png')
+cta.setAttribute('src', siteContent["cta"]["img-src"])
 
 const middle = document.getElementById("middle-img");
-middle.setAttribute('src', 'img/mid-page-accent.jpg')
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Task 2: Update the html with json data
+const navContent = document.querySelectorAll('a');
+navContent[0].textContent = siteContent["nav"] ["nav-item-1"]
+navContent[1].textContent = siteContent["nav"] ["nav-item-2"]
+navContent[2].textContent = siteContent["nav"] ["nav-item-3"]
+navContent[3].textContent = siteContent["nav"] ["nav-item-4"]
+navContent[4].textContent = siteContent["nav"] ["nav-item-5"]
+navContent[5].textContent = siteContent["nav"] ["nav-item-6"]
+
+const ctaContent = document.querySelector('.cta-text h1');
+ctaContent.textContent = siteContent["cta"] ["h1"]
+
+const btnContent = document.querySelector('.cta-text button');
+btnContent.textContent = siteContent["cta"] ["button"]
+
+const mainContent = document.querySelectorAll('.text-content h4');
+mainContent[0].textContent = siteContent["main-content"] ["features-h4"]
+mainContent[1].textContent = siteContent["main-content"] ["about-h4"]
+
+
+const mainContentP = document.querySelectorAll('.text-content p');
+mainContentP[0].textContent = siteContent["main-content"] ["features-content"]
+mainContentP[1].textContent = siteContent["main-content"] ["about-content"]
+
+
+
